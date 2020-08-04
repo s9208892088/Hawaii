@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+header {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  min-height: 10vh;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: white;
+  transition: all 0.3s ease-in;
+}
+
+header div.logo {
+  display: flex;
+  align-items: center;
+  flex-grow: 6;
+}
+header div.logo h1 {
+  font-weight: normal;
+}
+header div.logo img {
+  width: 5vw;
+  height: 5vw;
+}
+
+header nav {
+  flex-grow: 4;
+  margin-right: 3rem;
+  flex-basis: 450px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+}
+nav ul li a {
+  color: #09777d;
+  text-decoration: none;
+  font-size: 1.35rem;
+}
+nav ul li a:focus {
+  outline: solid;
+}
+
+nav ul li a img {
+  width: 2rem;
+  height: 2rem;
+}
+
+section.imageSection {
+  background: url(/Pictures/pexels-photo-416676.jpeg);
+  height: 90vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section.imageSection div.blackFront {
+  background-color: rgba(57, 55, 55, 0.4);
+  height: 90vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+section.imageSection h2 {
+  color: white;
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: normal;
+  margin: 3rem;
+}
+section.imageSection a {
+  color: white;
+  padding: 2rem 3rem;
+  background-color: #03a0c4;
+  font-size: 2.5rem;
+  text-decoration: none;
+  border-radius: 1rem;
+}
+section.imageSection a:focus {
+  outline: solid;
+}
+
+section.secondPart {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem 4rem;
+  min-height: 100vh;
+}
+
+section.secondPart h3 {
+  font-weight: normal;
+  font-size: 3.25rem;
+}
+
+section.secondPart div.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section.secondPart div.cards .card {
+  flex-grow: 1;
+  margin: 3rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-basis: 20rem;
+}
+section.secondPart div.cards .card h5 {
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+
+section.thirdPart {
+  display: flex;
+  height: 100vh;
+}
+
+section.thirdPart div.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #3099b1;
+}
+
+section.thirdPart div.intro {
+  color: white;
+  height: 30rem;
+  padding: 3rem;
+  padding-right: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+section.thirdPart div.intro h1 {
+  font-size: 4rem;
+}
+
+section.thirdPart div.intro p {
+  font-size: 1.75rem;
+}
+
+section.thirdPart div.intro a {
+  background-color: #055769;
+  padding: 2rem 3rem;
+  color: white;
+  text-decoration: none;
+  font-size: 2.5rem;
+  border-radius: 1rem;
+  margin: 5rem;
+  align-self: center;
+}
+
+section.thirdPart img {
+  object-fit: cover;
+}
+
+.dynamicHeader {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+.dynamicHeader a {
+  color: white;
+}
+
+section.form {
+  height: 50vh;
+}
+
+@media screen and (max-width: 1150px) {
+  section.thirdPart {
+    flex-direction: column;
+  }
+  section.thirdPart div.left div.intro h1 {
+    font-size: 1.5rem;
+  }
+  section.thirdPart div.left div.intro p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 876px) {
+  header nav {
+    margin-right: 0rem;
+  }
+  nav ul {
+    justify-content: space-evenly;
+  }
+  header div.logo {
+    justify-content: center;
+  }
+  header div.logo img {
+    width: 15vw;
+    height: 15vw;
+  }
+  section.thirdPart div.left div.intro a {
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+  }
+  section.thirdPart div.left div.intro {
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  section.imageSection h2 {
+    font-size: 2rem;
+  }
+  section.secondPart h3 {
+    font-size: 1.75rem;
+  }
+  section.secondPart {
+    padding: 0.5rem;
+  }
+  section.secondPart div.cards .card {
+    margin: 0;
+  }
+}
